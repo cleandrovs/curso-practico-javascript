@@ -7,7 +7,82 @@
     <title>Figuras Geometricas |Curso JavaScript</title>
 </head>
 <body>
-    <h1>Figuras Geometricas</h1>
+    <header>
+        <h1>Figuras Geometricas</h1>
+        <p>Este es el primer taller del curso práctico de JavaScript sobre figuras geométricas.</p>
+    </header>
+    <section>
+        <h2>Calcula el área y el perimetro de un cuadrado</h2>
+        <form>
+            <label id="inputCuadrado">
+                Escriben cuanto mide los lados del cuadrado
+            </label></br></br>
+            <input id="InputCuadrado" type="number"/> </br></br>
+            <div>
+                <p>Resultado Perimetro Cuadrado</p>
+                <label id="ResultadoPerimetroCuadrado"></label>
+            </div>
+            <div>
+                <p>Resultado Area Cuadrado</p>
+                <label id="ResultadoAreaCuadrado"></label>
+            </div>
+            <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+            <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+        </form>
+    </section>
+    <section>
+        <h2>
+            Calcula el área y el perimetro de un triangulo equilatero
+        </h2>
+        <form>
+            <label id="alturaTriangulo">
+                escribe la altura del triangulo 
+            </label></br></br>
+            <input id="AlturaTriangulo" type="number" /></br></br>
+            <label id="ladoTriangulo">
+                Escribe el valor de los lado1 del triangulo equilatero
+            </label></br></br>
+            <input id="LadoTriangulo" type="number" ></br></br>
+            <label id="ladosTriangulo">
+                Escribe el valor de los lado2 del triangulo equilatero
+            </label></br></br>
+            <input id="LadosTriangulo" type="number" ></br></br>
+            <label id="baseTriangulo">
+                escribe el valor de la base del triangulo.
+            </label></br></br>
+            <input id="BaseTriangulo" type="number" /></br></br>
+            <div>
+                <p>Resultado Perimetro Triangulo</p>
+                <label id="ResultadoPerimetroTriangulo"></label>
+            </div>
+            <div>
+                <p>Resultado Area Triangulo</p>
+                <label id="ResultadoAreaTriangulo"></label>
+            </div>
+            <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perímetro</button>
+            <button type="button" onclick="calcularAreaTriangulo()">Calcular el área</button>
+        </form>
+    </section>
+    <section>
+        <h2>
+            Calcula el área y el perimetro de un Circulo
+        </h2>
+        <form>
+            <label id="radioCirculo">Radio del circulo</label>
+            <input type="number" id="RadioCirculo" />
+            <div>
+                <p>Resultado Perimetro Circulo es: <label id="ResultadoPerimetroCirculo"></label></p>
+                <label id="ResultadoPerimetroCirculo"></label>
+            </div>
+            <div>
+                <p>Resultado Area Circulo es: <label id="ResultadoAreaCirculo"></label> </p>
+                
+            </div>
+        </form>
+        <button type="button" onclick="calcularPerimetroCirculo()">Calcular el perímetro</button>
+        <button type="button" onclick="calcularAreaCirculo()">Calcular el área</button>
+    </section>
+   
     <script src="figuras.js"></script>
 </body>
 </html>
