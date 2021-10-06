@@ -29,6 +29,14 @@ function perimetroTriangulo(lado1,lado2,base){
 function areaTriangulo (base,altura){
     return (base*altura)/2;
 };
+
+function alturaTRIANGULO (lado4,lado5,base2){
+    if (lado4 !== lado5){
+        alert('Los lados A y B no son iguales por lo tanto no es triangulo isosceles');
+    }else {
+    return Math.sqrt(((lado4**2))-((base2**2)/4)) ;}
+}
+console.log('la altura del triangulo es: '+alturaTRIANGULO());
 //console.log('El área del Triangulo es: '+areaTriangulo+'cm2');
 console.groupEnd();
 //código del circulo
@@ -115,4 +123,13 @@ function calcularAreaCirculo(){
     const areaC= areaCirculo(value);
     document.getElementById('ResultadoAreaCirculo').innerHTML= areaC;
     alert('El área del circulo es: '+areaC);
+}
+
+function calcularAlturaTriangulo(){
+    const input= document.getElementById('baseAltTriangulo').value;
+    const input1= document.getElementById('ladoAAltTriangulo').value;
+    const input2 =document.getElementById('ladoBAltTriangulo').value;
+
+    const altTr = alturaTRIANGULO(input1,input2,input);
+    document.getElementById('resultadoAlturaTriangulo').innerHTML=altTr;
 }
