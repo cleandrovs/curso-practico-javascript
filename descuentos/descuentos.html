@@ -19,7 +19,12 @@
             <label for="InputPrice">Escribe el precio de tu producto</label></br>
             <input  id="InputPrice" type="number"/></br></br>
             <label for="InputDiscount">Escribe el cupon para tu descuento:</label></br>
-            <input id="InputDiscount" type="text"/></br></br>
+           <!-- <input id="InputDiscount" type="text"/></br></br>-->
+           <select id="InputDiscount">
+               <option value="0">blackFriday</option>
+               <option value="1">cyberMonday</option>
+               <option value="2">diaSinIva</option>
+           </select>
             <button type="button" onclick="onClickButtonPriceDiscount()">
                 Calcular el precio con descuento
             </button>

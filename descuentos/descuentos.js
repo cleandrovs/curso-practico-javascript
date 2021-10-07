@@ -14,9 +14,10 @@ function verificationCoupon(){
 
 function onClickButtonPriceDiscount(){
     const inputPrice = document.getElementById("InputPrice").value;
-    const inputDiscount = document.getElementById("InputDiscount").value;
+    const inputDiscount = document.getElementById("InputDiscount");
+    const discountValue = inputDiscount.options[inputDiscount.selectedIndex].text;
 
-    const coupon =[
+    /* const coupon =[
         'Cesar_es_batman',
         'no_lo_digas',
         'es_un_secreto'
@@ -35,12 +36,36 @@ function onClickButtonPriceDiscount(){
     }
     else if(inputDiscount==='es_un_secreto'){
         descuento=30;
+    } */
+    const coupon =[{
+        name:'blackFriday',
+        discount: 15
+    },
+    {
+        name:'cyberMonday',
+        discount:20
+    },
+    {
+        name:'diaSinIva',
+        discount:30
+    }]
+
+    const isCuponValid= function (coupon){
+        return coupon.name === discountValue;
     }
 
+    const userCupon = coupon.find(isCuponValid);
 
-    var precioDescuento = calcularPrecioConDescuento(inputPrice,descuento);
-    var resultP = document.getElementById("ResultP");
-    resultP.innerText= "El precio con descuento son: "+precioDescuento; 
+    if(!userCupon){
+        alert('El cúpon :' + userCupon +' no es válido');
+    } else{
+        const descuento = userCupon.discount
+        var precioDescuento = calcularPrecioConDescuento(inputPrice,descuento);
+        var resultP = document.getElementById("ResultP");
+        resultP.innerText= "El precio con descuento son: "+precioDescuento; 
+    }
+
+   
 }
 
 
