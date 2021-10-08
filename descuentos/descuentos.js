@@ -8,9 +8,6 @@ function calcularPrecioConDescuento(precio,descuento){
     return precioConDescuento;
 }
 
-function verificationCoupon(){
-    
-}
 
 function onClickButtonPriceDiscount(){
     const inputPrice = document.getElementById("InputPrice").value;
@@ -50,12 +47,12 @@ function onClickButtonPriceDiscount(){
         discount:30
     }]
 
-    const isCuponValid= function (coupon){
+    const isCuponValid= function (coupon){ //verificamos  que el valor obtenido del html sea igual al que hay en el array
         return coupon.name === discountValue;
     }
 
-    const userCupon = coupon.find(isCuponValid);
-
+    const userCupon = coupon.find(isCuponValid); //metemos en una variable con la opcion .find de array de cupon y si es valido
+                                                 //si encuentra un elemento en el array obtenemos el valor de discount para calcular
     if(!userCupon){
         alert('El cúpon :' + userCupon +' no es válido');
     } else{
